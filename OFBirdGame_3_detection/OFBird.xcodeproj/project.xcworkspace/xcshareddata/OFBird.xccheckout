@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>745BB4C3-0A02-4996-9972-954BEDADB3AF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OFBird</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5AF2CC40-93A4-4D46-A612-16F46A8B7B0E</key>
+		<string>https://github.com/openFrameworksWorkshop/OFWorkshop_MobileApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OFBirdGame_Final/OFBird.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5AF2CC40-93A4-4D46-A612-16F46A8B7B0E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/openFrameworksWorkshop/OFWorkshop_MobileApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5AF2CC40-93A4-4D46-A612-16F46A8B7B0E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5AF2CC40-93A4-4D46-A612-16F46A8B7B0E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OFWorkshop_MobileApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
