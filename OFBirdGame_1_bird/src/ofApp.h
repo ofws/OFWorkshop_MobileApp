@@ -5,7 +5,7 @@
 #include "ofxiOSExtras.h"
 #import "AVSoundPlayer.h"
 
-class testApp : public ofxiOSApp{
+class ofApp : public ofxiOSApp{
 	
     public:
         void setup();
@@ -24,17 +24,9 @@ class testApp : public ofxiOSApp{
         void gotMemoryWarning();
         void deviceOrientationChanged(int newOrientation);
     
-        float posx, posy;
+        float posX, posY;
         ofPoint frc, vel, gravity;
-        float raidus;
-    
-    
-        //bomb
-        float bombX[4];
-        float bombY[4];
-        float distance;
-        float bombRadius;
-        float speed;
+        float radius;
     
 };
 

@@ -1,7 +1,7 @@
-#include "testApp.h"
+#include "ofApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){	
+void ofApp::setup(){	
 
     ofEnableSmoothing();
     ofEnableAlphaBlending();
@@ -9,9 +9,9 @@ void testApp::setup(){
     ofBackground(255);
     
     //initial bird
-    posx = 70;
-    posy = 300;
-    raidus = 30;
+    posX = 70;
+    posY = 300;
+    radius = 30;
     
     frc.set(0,0);
     vel.set(0, 0);
@@ -40,15 +40,15 @@ void testApp::setup(){
 }
 
 //--------------------------------------------------------------
-void testApp::update(){
+void ofApp::update(){
 
     if (bGameOver) {
         
-        //bird postion
-        posx = 100;
-        posy = 240;
+        //bird position
+        posX = 100;
+        posY = 240;
         
-        //bomb postion
+        //bomb position
         bombX[0] = ofGetWidth()+bombRadius;
         bombY[0] = 127;
         bombX[1] = bombX[0];
@@ -78,15 +78,15 @@ void testApp::update(){
     vel.x += gravity.x;
     vel.y += gravity.y;
     
-    posx += vel.x;
-    posy += vel.y;
+    posX += vel.x;
+    posY += vel.y;
     
     
     //bounce off the wall
-    if (posy >= ofGetHeight()-raidus) {
-        posy = ofGetHeight()-raidus;
-    }else if(posy <= raidus){
-        posy = raidus;
+    if (posY >= ofGetHeight()-radius) {
+        posY = ofGetHeight()-radius;
+    }else if(posY <= radius){
+        posY = radius;
     }
     
     frc.set(0, 0);
@@ -105,8 +105,8 @@ void testApp::update(){
     //let's reset bomb if they get out of screen
     for (int i=0; i<4; i+=2) {
         if (bombX[i] < -bombRadius) {
-            bombX[i] = ofGetWidth()+raidus;
-            bombX[i+1] = ofGetWidth()+raidus;
+            bombX[i] = ofGetWidth()+radius;
+            bombX[i+1] = ofGetWidth()+radius;
             
             //we randomly reset y
             bombY[i] = (int)ofRandom(ofGetHeight()/2);
@@ -122,18 +122,18 @@ void testApp::update(){
     
     //let's detect collision
     for (int i=0; i<4; i++) {
-        ofPoint a(posx, posy);
+        ofPoint a(posX, posY);
         ofPoint b(bombX[i],bombY[i]);
-        if (a.distance(b) < raidus+bombRadius) {
+        if (a.distance(b) < radius+bombRadius) {
             bGameOver = true;
         }
     }
     
     //star and bird collision, if they collide with eachother, score increases
     for (int i=0; i<2; i++) {
-        ofPoint a(posx, posy);
+        ofPoint a(posX, posY);
         ofPoint b(starx[i],stary[i]);
-        if (a.distance(b) < raidus+starRadius) {
+        if (a.distance(b) < radius+starRadius) {
             starx[i] = -starRadius;
             score ++;
         }
@@ -142,11 +142,11 @@ void testApp::update(){
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void ofApp::draw(){
     
     //draw bird
     ofSetColor(255,0,220);
-	ofCircle(posx, posy, raidus);
+	ofCircle(posX, posY, radius );
    
     for (int i=0; i<4; i++) {
         ofSetColor(0,255,30);
@@ -170,12 +170,12 @@ void testApp::draw(){
 }
 
 //--------------------------------------------------------------
-void testApp::exit(){
+void ofApp::exit(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::touchDown(ofTouchEventArgs & touch){
+void ofApp::touchDown(ofTouchEventArgs & touch){
     
     //reset velocity and add a lift force
     vel.set(0,0);
@@ -183,11 +183,11 @@ void testApp::touchDown(ofTouchEventArgs & touch){
 }
 
 //--------------------------------------------------------------
-void testApp::touchMoved(ofTouchEventArgs & touch){
+void ofApp::touchMoved(ofTouchEventArgs & touch){
 }
 
 //--------------------------------------------------------------
-void testApp::touchUp(ofTouchEventArgs & touch){
+void ofApp::touchUp(ofTouchEventArgs & touch){
    
     if (bGameOver) {
         bGameOver = false;
@@ -197,31 +197,31 @@ void testApp::touchUp(ofTouchEventArgs & touch){
 }
 
 //--------------------------------------------------------------
-void testApp::touchDoubleTap(ofTouchEventArgs & touch){
+void ofApp::touchDoubleTap(ofTouchEventArgs & touch){
 
 }
 
 //--------------------------------------------------------------
-void testApp::touchCancelled(ofTouchEventArgs & touch){
+void ofApp::touchCancelled(ofTouchEventArgs & touch){
     
 }
 
 //--------------------------------------------------------------
-void testApp::lostFocus(){
+void ofApp::lostFocus(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotFocus(){
+void ofApp::gotFocus(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::gotMemoryWarning(){
+void ofApp::gotMemoryWarning(){
 
 }
 
 //--------------------------------------------------------------
-void testApp::deviceOrientationChanged(int newOrientation){
+void ofApp::deviceOrientationChanged(int newOrientation){
 
 }
