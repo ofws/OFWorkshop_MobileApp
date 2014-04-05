@@ -40,7 +40,7 @@ void ofApp::setup(){
     //load images
     start_Image.loadImage("start.png");
     bomb_Image.loadImage("bomb.png");
-    brid_Image.loadImage("brid.png");
+    brid_Image.loadImage("bird.png");
     star_Image.loadImage("star.png");
     
     //load sound
