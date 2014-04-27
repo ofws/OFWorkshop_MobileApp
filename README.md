@@ -1,6 +1,6 @@
 OFWorkshop_MobileApp
 ====================
-![poster](http://photos2.meetupstatic.com/photos/event/3/a/9/a/600_356835002.jpeg)
+![poster](https://github.com/openFrameworksWorkshop/OFWorkshop_MobileApp/blob/master/poster.jpeg?raw=true)
 
 openFrameworks is a cross-platform tool which means it not only can build apps for our laptop, but also can build mobile apps for our phone and tablet. In this workshop, we will learn how to use OF to build our first mobile app on iOS. 
 
